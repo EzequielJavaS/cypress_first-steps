@@ -79,7 +79,7 @@ const NuevaCuenta = (props) => {
 
     return ( 
         <div className="form-usuario">
-            { alerta ? ( <div data-cy="alarta" className={`alerta ${alerta.categoria}`}>{alerta.msg}</div> )  : null }
+            { alerta ? ( <div data-cy="alerta" className={`alerta ${alerta.categoria}`}>{alerta.msg}</div> )  : null }
             <div className="contenedor-form sombra-dark">
                 <h1>Obtener una cuenta</h1>
 
@@ -88,7 +88,8 @@ const NuevaCuenta = (props) => {
                 >
                     <div className="campo-form">
                         <label htmlFor="nombre">Nombre</label>
-                        <input 
+                        <input
+                            data-cy="nombre-input"
                             type="text"
                             id="nombre"
                             name="nombre"
@@ -100,7 +101,8 @@ const NuevaCuenta = (props) => {
 
                     <div className="campo-form">
                         <label htmlFor="email">Email</label>
-                        <input 
+                        <input
+                            data-cy="email-input"
                             type="email"
                             id="email"
                             name="email"
@@ -112,7 +114,8 @@ const NuevaCuenta = (props) => {
 
                     <div className="campo-form">
                         <label htmlFor="password">Password</label>
-                        <input 
+                        <input
+                            data-cy="password-input"
                             type="password"
                             id="password"
                             name="password"
@@ -124,7 +127,8 @@ const NuevaCuenta = (props) => {
 
                     <div className="campo-form">
                         <label htmlFor="confirmar">Confirmar Password</label>
-                        <input 
+                        <input
+                            data-cy="repPass-input"
                             type="password"
                             id="confirmar"
                             name="confirmar"
@@ -135,7 +139,7 @@ const NuevaCuenta = (props) => {
                     </div>
 
                     <div className="campo-form">
-                        <input 
+                        <input
                             type="submit" 
                             className="btn btn-primario btn-block" 
                             value="Registrarme" 
