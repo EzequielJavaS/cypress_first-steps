@@ -79,7 +79,7 @@ const NuevaCuenta = (props) => {
 
     return ( 
         <div className="form-usuario">
-            { alerta ? ( <div className={`alerta ${alerta.categoria}`}>{alerta.msg}</div> )  : null }
+            { alerta ? ( <div data-cy="alarta" className={`alerta ${alerta.categoria}`}>{alerta.msg}</div> )  : null }
             <div className="contenedor-form sombra-dark">
                 <h1>Obtener una cuenta</h1>
 
@@ -139,6 +139,7 @@ const NuevaCuenta = (props) => {
                             type="submit" 
                             className="btn btn-primario btn-block" 
                             value="Registrarme" 
+                            data-cy="submit-nueva-cuenta"
                         />
                     </div>
                 </form>

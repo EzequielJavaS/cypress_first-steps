@@ -61,10 +61,11 @@ const Login = (props) => {
             { alerta ? ( <div className={`alerta ${alerta.categoria}`}>{alerta.msg}</div>)  : null }
 
             <div className="contenedor-form sombra-dark">
-                <h1>Iniciar Sesión</h1>
+                <h1 data-cy="title">Iniciar Sesión</h1>
 
                 <form
                     onSubmit={onSubmit}
+                    data-cy="form"
                 >
                     <div className="campo-form">
                         <label htmlFor="email">Email</label>
@@ -95,11 +96,17 @@ const Login = (props) => {
                         <input
                             type="submit" 
                             className="btn btn-primario btn-block" 
-                            value="Iniciar Sesión" />
+                            value="Iniciar Sesión"
+                            data-cy="submit-login"
+                            />
                     </div>
                 </form>
 
-                <Link to={'/nueva-cuenta'} className="enlace-cuenta">
+                <Link
+                    to={'/nueva-cuenta'}              
+                    className="enlace-cuenta"
+                    data-cy="link-NuevaCuenta"
+                >
                     Obtener Cuenta
                 </Link>
             </div>
