@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("crearCuenta", ({ name, email, password, repass }) => {
+    cy.visit('/nueva-cuenta');
+    cy.get('[data-cy=nombre-input]').type(name);
+    cy.get('[data-cy=email-input]').type(email); 
+    cy.get('[data-cy=password-input]').type(password); 
+    cy.get('[data-cy=repPass-input]').type(repass);
+    cy.get('[data-cy=submit-nueva-cuenta]').click();
+});
