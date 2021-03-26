@@ -40,4 +40,24 @@ describe('Test Login component', ()=>{
     it('Verifier link to  Nueva Cuenta', ()=>{
         cy.visit('/nueva-cuenta');
     });
+
+    it('Back to login', ()=>{
+        cy.get('[data-cy=backToLogin]').click();
+    });
+
+    it('Check text Campor Obligatorios',()=>{
+        cy.get('[data-cy=submit-login]').click(); //Simulamos un click en este elemento
+
+        cy.get('[data-cy=alerta]')
+            .should('exist') //Cuando simulo el click con los caampos vacíos, debe de existir esta alerta.
+            .invoke('text') //Invocamos el texto de la alerta.
+            .should('equal', 'Todos los campos son obligatorios'); //Lo checkeamos que sea el texto correcto
+    });
+
+
+
+    
+
+    
+
 });

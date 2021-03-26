@@ -148,7 +148,9 @@ const NuevaCuenta = (props) => {
                     </div>
                 </form>
 
-                <Link to={'/'} className="enlace-cuenta">
+                <Link to={'/'} className="enlace-cuenta"
+                    data-cy="backToLogin"
+                >
                     Volver a Iniciar Sesión
                 </Link>
             </div>

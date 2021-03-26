@@ -58,7 +58,7 @@ const Login = (props) => {
 
     return ( 
         <div className="form-usuario">
-            { alerta ? ( <div className={`alerta ${alerta.categoria}`}>{alerta.msg}</div>)  : null }
+            { alerta ? ( <div data-cy="alerta" className={`alerta ${alerta.categoria}`}>{alerta.msg}</div>)  : null }
 
             <div className="contenedor-form sombra-dark">
                 <h1 data-cy="title">Iniciar Sesión</h1>
